@@ -1,0 +1,28 @@
+{
+  "name": "githubfinder",
+  "version": "1.0.0",
+  "description": "Simple Node App connecting to GitHub API",
+  "main": "app.js",
+  "scripts": {
+    "test": "Mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameshughes7/GitHubFinder.git"
+  },
+  "author": "James Hughes and Tom Spencer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jameshughes7/GitHubFinder/issues"
+  },
+  "homepage": "https://github.com/jameshughes7/GitHubFinder#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0",
+    "supertest": "^3.0.0"
+  }
+}
