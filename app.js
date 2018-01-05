@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var port = 3000;
+var request = require('request');
 
 //Template setup
 app.set('view engine', 'ejs');
@@ -14,3 +15,5 @@ app.get('/', function(req,res) {
 app.listen(port, function() {
   console.log('Server starting on port ' + port);
 });
+
+module.exports = app;
