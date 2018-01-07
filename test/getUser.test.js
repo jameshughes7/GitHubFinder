@@ -1,14 +1,26 @@
 const expect = require('chai').expect;
 const nock = require('nock');
 
-const getUser = require('../index').getUser;
+const app = require('../app')
+const getUser = require('../getUser').getUser;
 const response = require('./response');
 
+const useMockedAPI = false
+
 describe('Get User tests', () => {
+  var server;
+
   beforeEach(() => {
-    nock('https://api.github.com')
+    if(useMockedAPI){
+      nock('https://api.github.com')
       .get('/users/octocat')
       .reply(200, response);
+    }
+    server = app.listen(3000)
+  });
+
+  afterEach(() => {
+    server.close();
   });
 
   it('Get a user by username', () => {
